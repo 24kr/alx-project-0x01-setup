@@ -62,3 +62,6 @@ export interface UserModalProps {
   onSubmit: (user: UserProps) => void;
   isActive: boolean;
 }
+export interface ModalProps extends UserProps {
+isActive: boolean;
+}
