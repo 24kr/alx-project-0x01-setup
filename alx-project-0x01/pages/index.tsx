@@ -1,6 +1,10 @@
+import React, { useState } from "react";
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import Button from "@/components/common/Button";
 
 const Home: React.FC = () => {
+  const [activeComponent, setActiveComponent] = useState<string>("");
   return (
     <div className="flex flex-col h-screen">
       <Header />
@@ -9,14 +13,13 @@ const Home: React.FC = () => {
           <h1 className="text-5xl font-bold text-white">
             Welcome to our Application!
           </h1>
-          <p className="mt-4 text-xl text-white">
+          <p className="m-6 text-xl text-white">
             We're glad you're here. Explore and enjoy your experience.
           </p>
-          <button className="mt-6 px-6 py-3 bg-white text-blue-500 rounded-full font-semibold hover:bg-gray-200 transition">
-            Get Started
-          </button>
+         <Button/>
   </div>
       </main>
+      <Footer/>
     </div>
   )
 }
